@@ -16,3 +16,30 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
+ cat << "EOF"
+
+ ██████╗ ██╗ ██████╗ ██████╗ ███╗   ███╗
+██╔════╝ ██║██╔════╝██╔═══██╗████╗ ████║
+██║  ███╗██║██║     ██║   ██║██╔████╔██║
+██║   ██║██║██║     ██║   ██║██║╚██╔╝██║
+╚██████╔╝██║╚██████╗╚██████╔╝██║ ╚═╝ ██║
+ ╚═════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝
+
+  https://github.com/yanuarakhid/gicom
+
+EOF
+echo "List all Directory"
+ls -la
+
+read -p "Do you want to add all files ? [y/n] " optn
+ 
+if [ "$optn" = "y" -o "$optn" = "Y" ]
+then
+    echo "Josss"
+elif [ "$optn" = "n" -o "$optn" = "N" ]
+then
+    echo "NNNNN"
+else
+    echo "salah"
+    exit 0;
+fi    
