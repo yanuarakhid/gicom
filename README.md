@@ -7,11 +7,10 @@
 ╚██████╔╝██║╚██████╗╚██████╔╝██║ ╚═╝ ██║
  ╚═════╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝
                                                                    
-
-```
 Gicom is tool helper to commit or push to git repository with Desktop Notification Features
+```
 
-![](https://i.imgur.com/y0mct7g.gif)
+![](https://i.imgur.com/WCfMsYA.gif)
 
 Require :
 ---------
@@ -37,3 +36,8 @@ Uninstall:
 ```
 sudo make uninstall
 ```
+Tested In: 
+----------
+OS | Desktop Notifications |Tested
+------------|------------ | -------------
+Arch Linux  |[Dunst](https://wiki.archlinux.org/index.php/Dunst "Dunst")      |:heavy_check_mark:
