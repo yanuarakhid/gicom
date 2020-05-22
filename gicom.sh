@@ -16,7 +16,7 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
- cat << "EOF"
+cat << "EOF"
 
  ██████╗ ██╗ ██████╗ ██████╗ ███╗   ███╗
 ██╔════╝ ██║██╔════╝██╔═══██╗████╗ ████║
@@ -30,16 +30,40 @@
 EOF
 echo "List all Directory"
 ls -la
-
+git status
 read -p "Do you want to add all files ? [y/n] " optn
  
 if [ "$optn" = "y" -o "$optn" = "Y" ]
 then
-    echo "Josss"
+    git add .
+    read -p "Input Your Commit Message : " msg
+    git commit -m "$msg"
+    echo "$msg"
+    git status
+    read -p "Do you want to push to Master Brach ? [y/n] " push
+    if [ "$push" = "y" -o "$push" = "Y" ]
+    then
+        git push origin master
+        notify-send 'Push Status' 'Push to Master Branch Success 👍 ' --icon=dialog-information
+        cat << "EOF"
+
+██████╗  ██████╗ ███╗   ██╗███████╗         
+██╔══██╗██╔═══██╗████╗  ██║██╔════╝         
+██║  ██║██║   ██║██╔██╗ ██║█████╗           
+██║  ██║██║   ██║██║╚██╗██║██╔══╝           
+██████╔╝╚██████╔╝██║ ╚████║███████╗██╗██╗██╗
+╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝╚═╝╚═╝
+                                            
+EOF
+    elif [ "$push" = "n" -o "$push" = "N" ]
+    then
+        exit 0;
+    fi
 elif [ "$optn" = "n" -o "$optn" = "N" ]
 then
-    echo "NNNNN"
-else
-    echo "salah"
+    echo "Input Manualy"
     exit 0;
-fi    
+else
+    echo "Wrong Input"
+    exit 0;
+fi
