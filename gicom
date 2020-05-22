@@ -36,10 +36,10 @@ read -p "Do you want to add all files ? [y/n] " optn
 if [ "$optn" = "y" -o "$optn" = "Y" ]
 then
     git add .
+    git status
     read -p "Input Your Commit Message : " msg
     git commit -m "$msg"
     echo "$msg"
-    git status
     read -p "Do you want to push to Master Brach ? [y/n] " push
     if [ "$push" = "y" -o "$push" = "Y" ]
     then
