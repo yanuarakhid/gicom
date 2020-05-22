@@ -39,7 +39,6 @@ then
     git status
     read -p "Input Your Commit Message : " msg
     git commit -m "$msg"
-    echo "$msg"
     read -p "Do you want to push to Master Brach ? [y/n] " push
     if [ "$push" = "y" -o "$push" = "Y" ]
     then
